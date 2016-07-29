@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="#18b0c1">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/settings_message"
+        android:id="@+id/textView4"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="100dp"
+        android:textSize="30dp"
+        android:gravity="center"
+        />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/slpHrsEditText"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:textSize="20dp"
+        android:hint="Must be between 1 and 23 hours"
+        android:gravity="center"
+
+        />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Update sleep settings"
+        android:id="@+id/button3"
+        android:layout_below="@+id/slpHrsEditText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="93dp"
+        android:onClick ="updateSleepPreferences"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize = "30dp"
+        android:id="@+id/errorMessage"
+        android:textColor="@android:color/holo_red_light"
+        android:layout_below="@+id/button3"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize = "30dp"
+        android:id="@+id/successMessage"
+        android:layout_below="@+id/slpHrsEditText"
+        android:layout_centerHorizontal="true" />
+</RelativeLayout>

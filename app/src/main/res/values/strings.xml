@@ -1,0 +1,18 @@
+<resources>
+    <string name="app_name">SleepTracker</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_help">helpActivity</string>
+    <string name="helpMessage">
+        Welcome to SleepTracker! To use this app, set a time that you would like to wake up at and how long you want to sleep for.
+        You will recieve an alarm around the time you should go to sleep so you can wake up, and go to bed on time.
+    </string>
+    <string name="alarmOff"> Turn Alarm Off</string>
+    <string name="preference_file_key">MY_PREFS</string>
+    <string name="pref_sleep_hours">HOURS_SLEEP</string>
+    <string name="settings_message">How many hours would you like to sleep for?</string>
+    <string name="bed_hour">BED_HOUR</string>
+    <string name="wakeup_hour">WAKEUP_HOUR</string>
+    <string name="wakeup_min">WAKEUP_MIN</string>
+
+
+</resources>
