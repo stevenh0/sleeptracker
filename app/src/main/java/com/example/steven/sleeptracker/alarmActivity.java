@@ -10,6 +10,7 @@ import android.os.Build;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TimePicker;
 
 import com.google.android.gms.appindexing.Action;
@@ -23,7 +24,10 @@ import java.util.concurrent.TimeUnit;
 public class alarmActivity extends AppCompatActivity {
 
     private AlarmManager alarmMgr;
+
     private PendingIntent alarmIntent;
+    private PendingIntent wakeUpIntent;
+    private PendingIntent sleepIntent;
     /**
      * ATTENTION: This was auto-generated to implement the App Indexing API.
      * See https://g.co/AppIndexing/AndroidStudio for more information.
@@ -38,10 +42,19 @@ public class alarmActivity extends AppCompatActivity {
         // ATTENTION: This was auto-generated to implement the App Indexing API.
         // See https://g.co/AppIndexing/AndroidStudio for more information.
         client = new GoogleApiClient.Builder(this).addApi(AppIndex.API).build();
+        Button alarm = (Button) findViewById(R.id.set_alarm_button);
+
+        alarm.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                setAlarm();
+            }
+        });
+
     }
 
 
-    public void setAlarm(View view) {
+    public void setAlarm() {
         TimePicker alarm = (TimePicker) findViewById(R.id.timePicker);
 
         int hour;
@@ -68,7 +81,10 @@ public class alarmActivity extends AppCompatActivity {
 
         //play wakeUpActivity on each alarm
         Intent intent = new Intent(this, wakeUpActivity.class);
+
         alarmIntent = PendingIntent.getBroadcast(this, 0, intent, 0);
+        wakeUpIntent = PendingIntent.getBroadcast(this, 0, intent, 0);
+        sleepIntent = PendingIntent.getBroadcast(this,0, intent, 0);
 
         // initialize AlarmManager and set two alarms, update preferences with relevant information
         alarmMgr = (AlarmManager)this.getSystemService(Context.ALARM_SERVICE);
@@ -125,4 +141,5 @@ public class alarmActivity extends AppCompatActivity {
         AppIndex.AppIndexApi.end(client, viewAction);
         client.disconnect();
     }
+
 }

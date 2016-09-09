@@ -7,12 +7,25 @@
         You will recieve an alarm around the time you should go to sleep so you can wake up, and go to bed on time.
     </string>
     <string name="alarmOff"> Turn Alarm Off</string>
+    <string name="settings_message">How many hours would you like to sleep for?</string>
+    <string name="no_goal_set">You didn't set 3 goals!</string>
+
+    //preference strings
     <string name="preference_file_key">MY_PREFS</string>
     <string name="pref_sleep_hours">HOURS_SLEEP</string>
-    <string name="settings_message">How many hours would you like to sleep for?</string>
+    <string name="pref_goal1">GOALONE</string>
+    <string name="pref_goal2">GOALTWO</string>
+    <string name="pref_goal3">GOALTHREE</string>
+
+
     <string name="bed_hour">BED_HOUR</string>
     <string name="wakeup_hour">WAKEUP_HOUR</string>
     <string name="wakeup_min">WAKEUP_MIN</string>
 
+    //intent key strings
+    <string name="intent_task">INTENT_TASK</string>
+    <string name="intent_playAlarm">INTENT_PLAY_ALARM</string>
+    <string name="intent_wakeup">INTENT_WAKEUP</string>
+    <string name="intent_sleep">INTENT_SLEEP</string>
 
 </resources>
